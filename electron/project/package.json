@@ -1,0 +1,39 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "Sample desc",
+  "main": "index.js",
+  "scripts": {
+    "package-mac": "electron-packager ./sample --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/Electron\\ tutorial\\ app-darwin-x64/Electron\\ tutorial\\ app.app electron-tutorial-app --out=release-builds --overwrite --icon=assets/icons/mac/icon.icns",
+    "start": "electron .",
+    "build": "electron-builder ."
+  },
+  "build": {
+    "appId": "com.manoj.myApp",
+    "productName": "My App",
+    "mac": {
+      "category": "my-app.category.developer-tools",
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+  "author": {
+    "name": "Manoj Satishkumar",
+    "email": "Manoj.Satishkumar@walmartlabs.com",
+    "url": "https://gecgithub01.walmart.com/M0S05EG"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^7.1.9",
+    "electron-builder": "^22.2.0",
+    "electron-packager": "^14.2.0"
+  }
+}

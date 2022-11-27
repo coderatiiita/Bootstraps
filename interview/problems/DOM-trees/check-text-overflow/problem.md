@@ -1,0 +1,1 @@
+Check if an innertext fits in a div container and doesn't cause overflow.

@@ -1,0 +1,26 @@
+Given a length n, count the number of strings of length n that can be made using ‘a’, ‘b’ and ‘c’ with at-most one ‘b’ and two ‘c’s allowed.
+
+Examples :
+
+Input : n = 3 
+Output : 19 
+Below strings follow given constraints:
+aaa aab aac aba abc aca acb acc baa
+bac bca bcc caa cab cac cba cbc cca ccb 
+
+Input  : n = 4
+Output : 39
+
+// Notes
+
+For n arrangements,
+
+only a -> 1
+1a & 1b -> nC1 = n
+1a & 1c -> nC1 =n
+1a & 2c -> nC2 = n*(n-1)/2
+1a & 1b & 1c -> nC1 * (n-1)C1 = n*(n-1)
+1a & 1b & 2c -> nC1 * (n-1)C2 = n*(n-1)*(n-2)/2
+
+1 + 2*n + n*(n-1)/2 +n*(n-1) + n*(n-1)*(n-2)/2
+ 

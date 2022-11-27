@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .flex-container {
+        /* Custom CSS for this example */
+        height: 500px;
+        background-color: lightgray;
+
+        /* Mandatory */
+        display: flex;
+
+        /*
+           Determines the direction of arrangement.
+
+           values:
+           row - stacks the flex items horizontally (from left to right)
+           row-reverse - stacks the flex items horizontally (but from right to left)
+           column - stacks the flex items vertically (from top to bottom)
+           column-reverse - stacks the flex items vertically (but from bottom to top)
+        */
+        flex-direction: row;
+
+        /*
+           Determines if items will wrap when window size exeeds.
+
+           values:
+           nowrap - flex items will not wrap (default)
+           wrap - flex items will wrap if necessary
+           wrap-reverse - items will wrap if necessary, in reverse order
+        */
+        flex-wrap: nowrap;
+
+        /*
+           shorthand property for setting both the flex-direction and flex-wrap properties.
+        */
+        flex-flow: row wrap;
+
+        /*
+           Aligns the flex items:
+
+           values:
+           flex-start(default) - aligns the flex items at the beginning of the container
+           center - aligns the flex items at the center of the container
+           flex-end - aligns the flex items at the end of the container
+           space-around - displays the flex items with space before, between, and after the lines
+           space-between - displays the flex items with space between the lines:
+        */
+        justify-content: flex-start;
+
+        /*
+           Also used to align the flex items inside the container:
+
+           values:
+           stretch - stretches the flex items to fill the container (this is default)
+           center -  aligns the flex items in the middle of the container
+           flex-start - aligns the flex items at the top of the container
+           flex-end - aligns the flex items at the bottom of the container
+           baseline - aligns the flex items such as their baselines aligns
+        */
+        align-items: stretch;
+
+        /*
+           Used to align the flex lines.
+
+           values:
+           stretch (default) - stretches the flex lines to take up the remaining space
+           space-between - displays the flex lines with equal space between them
+           space-around - displays the flex lines with space before, between, and after them
+           center - displays display the flex lines in the middle of the container
+           flex-start - displays the flex lines at the start of the container
+           flex-end - displays the flex lines at the end of the container
+        */
+        align-content: space-between;
+      }
+
+      .flex-item-documentation {
+        /*
+           specifies the order of the flex items.
+           value : Integer
+        */
+        order: 1;
+
+        /*
+           specifies how much a flex item will grow relative to the rest of the flex items.
+           value : Integer
+        */
+        flex-grow: 6;
+
+        /*
+           specifies how much a flex item will shrink relative to the rest of the flex items.
+           value : Integer
+        */
+        flex-shrink: 6;
+
+        /*
+           specifies the initial length of a flex item.
+           value : px
+        */
+        flex-basis: 100px;
+
+        /*
+           shorthand property for the flex-grow, flex-shrink, and
+           flex-basis properties.
+        */
+        flex: 0 0 200px;
+
+        /*
+           specifies the alignment for the selected item inside the flexible container.
+           Note: align-self overrides align-items.
+
+           values:
+
+           center -  aligns the flex item in the middle of the container
+           flex-start - aligns the flex item at the top of the container
+           flex-end - aligns the flex item at the bottom of the container
+           
+        */
+        align-self: center;
+      }
+
+      .flex-item {
+        /* Custom CSS for this example */
+        margin: 10px;
+        text-align: center;
+      }
+
+      .even-item {
+        /* Custom CSS for this example */
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        font-size: medium;
+      }
+      .odd-item {
+        /* Custom CSS for this example */
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        font-size: xx-large;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item odd-item" style="order: 1">1</div>
+      <div class="flex-item even-item" style="order: 2">2</div>
+      <div class="flex-item odd-item" style="order: 3">3</div>
+      <div class="flex-item even-item" style="order: 4">4</div>
+      <div class="flex-item odd-item" style="order: 5">5</div>
+      <div class="flex-item even-item" style="order: 6">6</div>
+      <div class="flex-item odd-item" style="order: 7">7</div>
+      <div class="flex-item even-item" style="order: 8">8</div>
+      <div class="flex-item odd-item" style="order: 9">9</div>
+      <div class="flex-item even-item" style="order: 20">10</div>
+    </div>
+  </body>
+</html>

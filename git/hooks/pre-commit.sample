@@ -1,0 +1,6 @@
+#!/bin/sh
+
+#  Check for the main.js file
+result = 0
+
+npm run build
